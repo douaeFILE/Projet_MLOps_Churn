@@ -1,4 +1,4 @@
 [core]
-    remote = stockage_drive
-['remote "stockage_drive"']
-    url = gdrive://1gf7MUGatkUVYMoMse3lGnaVBRhuU3X04
+    remote = stockage_local
+['remote "stockage_local"']
+    url = C:\Users\Hp\Desktop\Stockage_DVC
