@@ -39,3 +39,7 @@ pytest
 # Gestion des fichiers de configuration
 PyYAML
 python-dotenv
+
+# Connexion et gestion de la base de donnees MariaDB
+sqlalchemy
+pymysql
