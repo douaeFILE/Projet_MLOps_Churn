@@ -1,0 +1,189 @@
+{
+  "version_modele": "V1",
+  "date_calibration_utc": "2026-11-22T14:34:21.442549+00:00",
+  "configuration": {
+    "repetitions": 100,
+    "taille_lot": 200,
+    "seed": 42,
+    "train": "data/train.csv",
+    "validation": "data/validation.csv",
+    "simulation": "data/simulation.csv",
+    "modele": "models\\model_v1.pkl",
+    "min_categorie": 100,
+    "categories_conservees": {
+      "Crop": [
+        "Rice",
+        "Maize",
+        "Moong(Green Gram)",
+        "Urad",
+        "Groundnut",
+        "Sesamum",
+        "Sugarcane",
+        "Potato",
+        "Wheat",
+        "Rapeseed &Mustard",
+        "Ragi",
+        "Jowar",
+        "Bajra",
+        "Gram",
+        "Small Millets",
+        "Arhar/Tur",
+        "Cotton(Lint)",
+        "Onion",
+        "Sunflower",
+        "Dry Chillies",
+        "Soyabean",
+        "Tobacco",
+        "Peas & Beans (Pulses)",
+        "Other Kharif Pulses",
+        "Horse-Gram",
+        "Turmeric",
+        "Other  Rabi Pulses",
+        "Linseed",
+        "Ginger",
+        "Masoor",
+        "Barley",
+        "Castor Seed",
+        "Sweet Potato",
+        "Garlic",
+        "Banana",
+        "Coriander",
+        "Tapioca",
+        "Mesta",
+        "Niger Seed",
+        "Jute",
+        "Safflower"
+      ],
+      "Season": [
+        "Kharif",
+        "Rabi",
+        "Whole Year",
+        "Summer",
+        "Autumn",
+        "Winter"
+      ],
+      "State": [
+        "Karnataka",
+        "Andhra Pradesh",
+        "West Bengal",
+        "Bihar",
+        "Chhattisgarh",
+        "Tamil Nadu",
+        "Uttar Pradesh",
+        "Madhya Pradesh",
+        "Gujarat",
+        "Maharashtra",
+        "Odisha",
+        "Assam",
+        "Uttarakhand",
+        "Nagaland",
+        "Puducherry",
+        "Haryana",
+        "Meghalaya",
+        "Jammu And Kashmir",
+        "Himachal Pradesh",
+        "Kerala",
+        "Tripura",
+        "Manipur",
+        "Mizoram",
+        "Punjab",
+        "Telangana",
+        "Arunachal Pradesh",
+        "Goa",
+        "Jharkhand",
+        "Sikkim",
+        "Delhi"
+      ]
+    },
+    "regle_alerte_globale": "au_moins_une_metrique_en_alerte"
+  },
+  "data_drift": {
+    "numeriques": {
+      "Crop_Year": {
+        "test": "KS",
+        "seuil": 0.135,
+        "percentile": 95,
+        "sens": "superieur",
+        "moyenne_simulations": 0.07755
+      },
+      "Area": {
+        "test": "KS",
+        "seuil": 0.12024999999999998,
+        "percentile": 95,
+        "sens": "superieur",
+        "moyenne_simulations": 0.08205
+      },
+      "Annual_Rainfall": {
+        "test": "KS",
+        "seuil": 0.11524999999999998,
+        "percentile": 95,
+        "sens": "superieur",
+        "moyenne_simulations": 0.07890000000000001
+      },
+      "Fertilizer": {
+        "test": "KS",
+        "seuil": 0.135,
+        "percentile": 95,
+        "sens": "superieur",
+        "moyenne_simulations": 0.0818
+      },
+      "Pesticide": {
+        "test": "KS",
+        "seuil": 0.12,
+        "percentile": 95,
+        "sens": "superieur",
+        "moyenne_simulations": 0.08095000000000001
+      }
+    },
+    "categorielles": {
+      "Crop": {
+        "test": "CHI2",
+        "seuil": 52.83169970518061,
+        "percentile": 95,
+        "sens": "superieur",
+        "moyenne_simulations": 39.710885510868266
+      },
+      "Season": {
+        "test": "CHI2",
+        "seuil": 10.678963667462522,
+        "percentile": 95,
+        "sens": "superieur",
+        "moyenne_simulations": 5.129604384724466
+      },
+      "State": {
+        "test": "CHI2",
+        "seuil": 38.71078122559452,
+        "percentile": 95,
+        "sens": "superieur",
+        "moyenne_simulations": 28.403735637246253
+      }
+    }
+  },
+  "performance": {
+    "MAE": {
+      "seuil": 21.885780107423418,
+      "percentile": 95,
+      "sens": "superieur",
+      "moyenne_simulations": 10.548007718452483
+    },
+    "RMSE": {
+      "seuil": 173.8241587397049,
+      "percentile": 95,
+      "sens": "superieur",
+      "moyenne_simulations": 89.57276914372447
+    },
+    "R2": {
+      "seuil": 0.4624617810265169,
+      "percentile": 5,
+      "sens": "inferieur",
+      "moyenne_simulations": 0.03311415441729481
+    },
+    "MedAE": {
+      "seuil": 1.203980124783628,
+      "percentile": 95,
+      "sens": "superieur",
+      "moyenne_simulations": 1.0830164495649164
+    }
+  },
+  "statut": "provisoire_a_valider_selon_resultats_scenarios"
+}

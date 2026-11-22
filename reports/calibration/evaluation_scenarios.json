@@ -1,0 +1,13 @@
+{
+  "nombre_lots_par_scenario": 20,
+  "taille_lot": 200,
+  "resultats_pct": {
+    "fausses_alertes_drift_pct": 45.0,
+    "fausses_alertes_performance_pct": 45.0,
+    "detection_drift_pct": 100.0,
+    "detection_baisse_performance_pct": 100.0,
+    "detection_drift_Annual_Rainfall_pct": 100.0,
+    "detection_drift_Season_pct": 100.0
+  },
+  "note": "Les scénarios sont artificiels ; les résultats ne garantissent pas la performance en production."
+}
